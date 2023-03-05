@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo_secudario.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div id="contenedor">
+        <header id="titulo">
+            <h1>formulario</h1>
+        </header>
+        <nav>
+            <ul id="menu_secu">
+                <li><a href="../index.html">Principal</a></li>
+                <li><a href="./Lince.html">Lince Ibérico</a></li>
+                <li><a href="./Leopardo.html">Leopardo</a></li>
+                <li><a href="./puma.html">Puma</a></li>
+            </ul>
+        </nav>
+        <aside>
+            <h3 id="noticias">NOTICIAS</h3>
+            <p><a href="https://www.20minutos.es/noticia/5070737/0/captan-primera-vez-imagen-lince-negro/">Lince negro captado en camara</a></p>
+            <p><a href="https://www.lasexta.com/programas/arusitys/evelyn-segura/graban-leopardo-chino-norte-especie-amenazada-muy-complicada-captar_2022010561d55ed0bda5150001bdf40f.html">Leopardo chino amenazado</a></p>
+            <p><a href="https://www.lasexta.com/noticias/deportes/ciclismo/impactante-leopardo-aparece-nada-ataca-ciclista-india_2022061862ae132719db5700010ecbf0.html">Leopardo ataca a ciclista</a></p>
+            <p><a href="https://www.lavoz.com.ar/ciudadanos/regionales/rescataron-una-puma-bebe-en-el-norte-de-cordoba/">Bebe puma en cordoba</a></p>
+            <p><a href="https://www.granadahoy.com/provincia/Sierra-Arana-Granada-ejemplares-iberico_0_1768024673.html">Ejemplares de lince en Sierra Arana</a></p>
+            <p><a href="https://www.hoy.es/prov-caceres/teja-templario-primeros-linces-liberados-20230220123343-nt.html">Lince liberados</a></p>
+        </aside>
+        <main>
+            <form action="./vacio.html">
+                <div id="primer">
+                    <h3 class="titulos_secu">Datos Personales:</h3>
+                    <p>
+                        <label for="nomapell">Nombre y Apellidos:</label>
+                        <input type="text" name="nomapell" id="nomapell" maxlength="50" class="barras">
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" class="barras" required/>
+                    </p>
+                    <p>
+                        <label for="edad">Edad:</label>
+                        <input type="number" min="1" max="150" id="edad" step="10" name="edad" class="barras"/>
+                    </p>
+                    <fieldset>
+                        <legend>Genero:</legend>
+                        <p><label for="Mujer">Mujer</label><input type="radio" name="genero" value="Mujer"/></p>
+                        <p><label for="Hombre">Hombre</label><input type="radio" name="genero" value="Hombre"/></p>
+                        <p><label for="Otro">Otro</label><input type="radio" name="genero" value="Otro"/></p>
+                    </fieldset>
+                    <p><label for="Comunidad">Comunidad:</label>
+                        <select name="comunidad" id="comunidad" class="separacion">
+                            <option value="Andalucia">Andalucia</option>
+                            <option value="Murcia">Murcia</option>
+                            <option value="Castilla La Mancha" selected>Castilla La Mancha</option>
+                            <option value="Extremadura">Extremadura</option>
+                            <option value="Valencia">Valencia</option>
+                            <option value="Castilla y Leon">Castilla y Leon</option>
+                            <option value="Madrid">Madrid</option>
+                            <option value="Aragon">Aragon</option>
+                            <option value="Islas Baleares">Islas Baleares</option>
+                            <option value="Islas Canarias">Islas Canarias</option>
+                            <option value="Cantabria">Cantabria</option>
+                            <option value="Cataluña">Cataluña</option>
+                            <option value="Navarra">Navarra</option>
+                            <option value="Galicia">Galicia</option>
+                            <option value="Pais Vasco">Pais Vasco</option>
+                            <option value="Asturias">Asturias</option>
+                            <option value="La Rioja">La Rioja</option>
+                            <option value="Ceuta y Melilla">Ceuta y Melilla</option>
+                        </select>
+                    </p>
+                </div>
+                
+                <div id="segundo">
+                    <h3 class="titulos_secu">Datos de la especie:</h3>
+                    <p>
+                        <label id="rojo" for="nombreesp">Nombre de la especie:
+                        <input type="text" name="nombre" maxlength="50" size="23" id="nombreesp" class="barras" required></label>
+                    </p>
+                    <p>
+                        <label for="numtotal">Número total de ejemplares:
+                        <input type="number" min="1" max="150" id="numtotal" class="barras"></label>
+                    </p>
+                    <p>
+                        <label for="nummascu">Número de machos:
+                        <input type="number" min="1" max="150" id="nummascu" class="barras"></label>
+                    </p>
+                    <p>
+                        <label for="numfem">Número de hembras:
+                        <input type="number" min="1" max="150" id="numfem" class="barras"></label>
+                    </p>
+                    <p>
+                        <label for="numinde">Número de indeterminados:
+                        <input type="number" min="1" max="150" id="numide" class="barras" ></label>
+                    </p>
+                        <textarea id="ayudanos" cols="25" rows="5" name="ayudanos" required>Mandar informacion adicional</textarea>
+                    <p>
+                        <label for="archivo"><input type="file" id="arch" name="arch" class="separacion" required/></label>
+                    </p>
+                    
+                </div>
+                <div id="captcha">
+                    <p>
+                        <label for="letras">Escriba los siguientes caracteres:
+                        <img src="../img/Captcha-ejemplo.webp" alt="codigo">
+                        <input type="text" name="letras" id="letras"></label>
+                        <img src="../img/sound.webp" alt="voz">
+                        <img src="../img/captcha-q.webp" alt="duda">
+                        <img src="../img/refresh25x25.webp" alt="recargar">
+                    </p>
+                </div>
+                <div id="botones">
+                    <input type="reset" id="borrar" value="Borrar datos"/>
+                    <input type="submit" id="enviar" value="Enviar datos"/>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <div id="redes">
+                <img src="../img/redes.webp" alt="redes">
+            </div>
+            <p id="copy">&copy; Copyright</p>
+        </footer>
+    </div>
+</body>
+</html>
